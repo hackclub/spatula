@@ -1,0 +1,87 @@
+/* style.css for Spatula, inspired by sidequests.hackclub.com */
+
+body {
+  background: #f7f6f3;
+  color: #222;
+  font-family: 'Inter', system-ui, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 600px;
+  margin: 40px auto;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 32px 0 rgba(0,0,0,0.08);
+  padding: 32px 24px 16px 24px;
+}
+
+header h1 {
+  font-size: 2.8rem;
+  font-weight: 900;
+  margin: 0 0 0.2em 0;
+  color: #e94f4a;
+  letter-spacing: -2px;
+}
+
+header h3 {
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: #555;
+  margin: 0 0 1.5em 0;
+}
+
+.intro p {
+  font-size: 1.15rem;
+  margin-bottom: 2em;
+}
+
+.steps h2 {
+  font-size: 1.3rem;
+  color: #e94f4a;
+  margin-bottom: 0.5em;
+}
+
+.steps ol {
+  padding-left: 1.2em;
+  margin-bottom: 2em;
+}
+
+.steps li {
+  margin-bottom: 0.7em;
+  font-size: 1.08rem;
+}
+
+.cta {
+  text-align: center;
+  margin-bottom: 2em;
+}
+
+.button {
+  display: inline-block;
+  background: #e94f4a;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.1rem;
+  padding: 0.7em 2.2em;
+  border-radius: 999px;
+  text-decoration: none;
+  box-shadow: 0 2px 8px 0 rgba(233,79,74,0.10);
+  transition: background 0.2s;
+}
+.button:hover {
+  background: #c43c36;
+}
+
+footer {
+  text-align: center;
+  color: #888;
+  font-size: 0.98rem;
+  margin-top: 2em;
+}
+
+footer a {
+  color: #e94f4a;
+  text-decoration: underline;
+}
