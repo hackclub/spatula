@@ -1,40 +1,21 @@
-from datetime import datetime
-import random
 import time
-import httpx
 import schedule
+import httpx
 
 print("This is a spatula project")
 
-NTFY_TOPIC = "well-hi-there"
-
-
-def get_event() -> str:
-    date_today = datetime.now().strftime("%m/%d")
-    r = httpx.get(
-        f"https://api.wikimedia.org/feed/v1/wikipedia/en/onthisday/holidays/{date_today}",
-    )
-    data = r.json()
-    event_summaries = [e["text"] for e in data["holidays"]]
-    # Pick a random
-    random_event_summary = random.choice(event_summaries)
-    return random_event_summary
-
-
 def main():
-    text = get_event()
+    text = "We've been trying to reach you about your car's extended warranty"
     httpx.post(
-        f"https://ntfy.sh/{NTFY_TOPIC}",
+        "https://ntfy.sh/your-unique-channel",
         data=text,
         headers={
-            "Title": "Random Holiday Occuring Today",
-            # https://docs.ntfy.sh/publish/#message-priority
-            # "Priority": "default",
-            "Tags": "rewind",
+            "Title": "This is totally really important",
+            "Tags": "rotating_light",
         },
     )
     print(
-        f'Posted: "{text}" to https://ntfy.sh/{NTFY_TOPIC}'
+        f'Posted: "{text}" to https://ntfy.sh/your-unique-channel'
     )
 
 
